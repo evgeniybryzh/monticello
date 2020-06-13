@@ -1,0 +1,36 @@
+.gallery {
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+  @include flex-main(column, flex-start, center);
+  @include media-q($desctop-small) {
+    width: 100%;
+    height: 1000px;
+    padding-top: 170px;
+    @include flex-main(column, flex-start, center);
+  }
+  &__title {
+    @include font($main-bold-font, 44px, 400, $news-title-color);
+    position: relative;
+    margin-bottom: 90px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 1px;
+      background-color: $footer-black;
+      left: 60px;
+      top: -28px;
+    }
+  }
+  &__grid {
+    margin-bottom: 55px;
+  }
+  &__button {
+    margin-bottom: 20px;
+    @include media-q($tablet) {
+      margin-bottom: 0px;
+    }
+  }
+}

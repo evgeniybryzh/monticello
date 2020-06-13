@@ -1,0 +1,49 @@
+.grid {
+  @include flex-main(column, space-between, center);
+  @include media-q($desctop-small) {
+    @include flex-main(row, space-between, center);
+  }
+  &__big-img {
+    margin-right: 10px;
+  }
+  &__big-image {
+    width: 300;
+    height: 300px;
+    @include media-q($tablet-small) {
+      width: 577;
+      height: 437px;
+    }
+  }
+  &__big-box {
+    @include flex-main(column, center, center);
+  }
+  &__row {
+    @include flex-main(column, center, center);
+    &:nth-child(1) {
+      margin-bottom: 0px;
+    }
+    @include media-q($tablet) {
+      @include flex-main(row, space-between, center);
+      &:nth-child(1) {
+        margin-bottom: 6px;
+      }
+    }
+  }
+  &__image-small:nth-child(1) {
+    margin-right: 00px;
+    @include media-q($tablet) {
+      margin-right: 10px;
+    }
+  }
+  &__image-s {
+    width: 300;
+    height: 300px;
+    margin-bottom: 10px;
+
+    @include media-q($tablet-small) {
+      width: 287px;
+      height: 213px;
+      margin-bottom: 0px;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.nav-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  z-index: 500;
+  @include flex-main(column, center, center);
+  flex-wrap: wrap;
+
+  @include media-q($tablet) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 160px;
+    z-index: 500;
+    @include flex-main(row, space-between, center);
+  }
+  &__link {
+    @include flex-main;
+  }
+  flex-wrap: wrap;
+  &__nav {
+    flex-basis: 60%;
+    padding-left: 54px;
+  }
+  &__nav-list {
+    @include flex-main(row, center, center);
+    flex-wrap: wrap;
+    @include media-q($tablet) {
+      @include flex-main(row, flex-start, center);
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__nav-item {
+    cursor: pointer;
+    @include flex-main;
+    border: 1px solid $white;
+    margin-right: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    @include media-q($tablet) {
+      border: none;
+      margin-bottom: 0px;
+      cursor: pointer;
+      @include flex-main;
+
+      &:nth-child(1) {
+        margin-right: 65px;
+      }
+      &:nth-child(2) {
+        margin-right: 65px;
+      }
+      &:nth-child(3) {
+        margin-right: 100px;
+      }
+    }
+  }
+  &__link:hover > &__circle {
+    background-color: #fff;
+  }
+  &__icon-box {
+    flex-basis: 15%;
+  }
+  &__circle {
+    display: none;
+    transition: 0.3s ease all;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid $white;
+    margin-right: 15px;
+    @include media-q($tablet) {
+      display: block;
+      transition: 0.3s ease all;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid $white;
+      margin-right: 15px;
+    }
+  }
+  &__page-name {
+    @include font($main-font, 14px, 400, $white);
+  }
+  &__icons-list {
+    @include flex-main(row, space-between, center);
+    width: 160px;
+  }
+  &__icon {
+    transition: 0.3s ease all;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $white;
+    border-radius: 50%;
+    @include flex-main;
+    cursor: pointer;
+    @include media-q($tablet) {
+      &:hover {
+        border: 3px solid $white;
+      }
+    }
+  }
+  &__ico-link {
+    @include flex-main;
+  }
+}

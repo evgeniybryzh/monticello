@@ -1,0 +1,71 @@
+.description {
+  width: 100%;
+  height: 100vh;
+  padding-top: 60px;
+  @include flex-main(column, space-around, center);
+  &__bg-box {
+    width: 300px;
+    height: 470px;
+    background-color: $description-bg-color;
+    position: absolute;
+    top: -70px;
+    left: -215px;
+    z-index: -1;
+
+    @include media-q($phablet) {
+      width: 385px;
+      height: 470px;
+      background-color: $description-bg-color;
+      position: absolute;
+      top: -70px;
+      left: -215px;
+      z-index: -1;
+    }
+    @include media-q($tablet) {
+      width: 585px;
+      height: 470px;
+      background-color: $description-bg-color;
+      position: absolute;
+      top: -70px;
+      left: -215px;
+      z-index: -1;
+    }
+  }
+  &__image-box {
+    position: relative;
+    margin-right: 0px;
+    @include media-q($tablet) {
+      position: relative;
+      margin-right: 72px;
+    }
+  }
+  &__title {
+    @include font($main-bold-font, 44px, 400, $news-title-color);
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 1px;
+      background-color: $footer-black;
+      left: 110px;
+      top: -28px;
+    }
+  }
+  &__content-wrapper {
+    @include flex-main(column, center, center);
+    flex-wrap: nowrap;
+    padding-top: 30px;
+    @include media-q($desctop-small) {
+      @include flex-main(row, space-between, center);
+      flex-wrap: nowrap;
+      padding-top: 30px;
+    }
+  }
+  &__image {
+    width: 350px;
+    @include media-q($tablet) {
+      width: 630px;
+    }
+  }
+}

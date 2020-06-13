@@ -1,0 +1,38 @@
+.content-box {
+  height: 100%;
+  @include flex-main(column, flex-start, flex-start);
+  padding: 57px 0;
+
+  &__ico {
+    width: 20px;
+    height: 20px;
+  }
+  &__content-subtitle {
+    @include font($main-font, 22px, 400, $news-title-color);
+  }
+  &__content-title {
+    text-transform: uppercase;
+    @include font($main-bold-font, 44px, 600, $news-title-color);
+    margin-bottom: 24px;
+  }
+  &__text {
+    @include font($secondary-font, 18px, 400, $news-title-color);
+    line-height: 30px;
+    margin-bottom: 30px;
+    font-size: 4vw;
+    @include media-q($tablet) {
+      @include font($secondary-font, 18px, 400, $news-title-color);
+
+      line-height: 30px;
+      margin-bottom: 30px;
+    }
+  }
+  &__button {
+    margin-bottom: 54px;
+    @include font($main-font, 14px, 400, $news-title-color);
+  }
+  &__location {
+    @include font($secondary-font, 18px, 400, $news-title-color);
+    font-style: italic;
+  }
+}

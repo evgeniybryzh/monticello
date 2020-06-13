@@ -1,0 +1,102 @@
+.form {
+  @include flex-main(column, flex-start, center);
+
+  width: 350px;
+  height: auto;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  background-image: url(../images/form-bg.jpg);
+  background-size: cover;
+  padding-top: 45px;
+  padding-left: 10px;
+  padding-right: 10px;
+  @include media-q($tablet) {
+    @include flex-main(column, flex-start, center);
+    width: 770px;
+    height: 453px;
+    position: absolute;
+    top: 395px;
+    left: 565px;
+    z-index: 1000;
+    background-image: url(../images/form-bg.jpg);
+    background-size: cover;
+    padding-top: 85px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  &__wrapper {
+    width: 100%;
+    @include flex-main(column, flex-start, center);
+    @include media-q($tablet) {
+      width: 100%;
+      @include flex-main(row, space-between, center);
+    }
+  }
+  &__title {
+    @include font($main-bold-font, 44px, 600, $news-title-color);
+    position: relative;
+    margin-bottom: 25px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 1px;
+      background-color: $footer-black;
+      left: 113px;
+      top: -20px;
+    }
+  }
+  &__svg {
+    width: 15px;
+    height: 15px;
+    fill: $footer-icon-color;
+    z-index: 200;
+    margin-right: 10px;
+  }
+  &__inputs {
+    height: 100%;
+    flex-basis: 50%;
+    @include flex-main(column, flex-start, flex-end);
+  }
+  &__info-items:not(:last-of-type) {
+    margin-bottom: 40px;
+    @include flex-main(row, flex-start, center);
+  }
+  &__text {
+    @include font($main-font, 18px, 400, $news-title-color);
+    &:first-of-type {
+    }
+  }
+  &__input {
+    width: 310px;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid $grey;
+    @include font($main-font, 22px, 400, $grey);
+    &::placeholder {
+      @include font($main-font, 22px, 400, $grey);
+    }
+    &:first-of-type {
+      margin-bottom: 30px;
+    }
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+    &:focus {
+      border-bottom: 1px solid $news-title-color;
+      @include font($main-font, 22px, 400, $news-title-color);
+      &::placeholder {
+        @include font($main-font, 22px, 400, $news-title-color);
+      }
+    }
+  }
+  &__button {
+    width: 140px;
+  }
+  &__info-list {
+    padding-top: 20px;
+  }
+}

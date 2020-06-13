@@ -1,0 +1,31 @@
+.slide-info {
+  width: 371px;
+  height: 514px;
+  background-color: $white;
+  @include flex-main(column, space-between, flex-start);
+
+  &__title {
+    @include font($main-bold-font, 22px, 400, $news-title-color);
+    text-transform: uppercase;
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+  &__text {
+    @include font($secondary-font, 18px, 400, $news-text-color);
+    padding-left: 23px;
+    padding-right: 20px;
+  }
+  &__name {
+    @include font($main-font, 18px, 400, $news-title-color);
+    padding-left: 23px;
+  }
+  &__date {
+    @include font($main-font, 14px, 400, $news-date-color);
+    padding-left: 23px;
+  }
+  &__profile-box {
+    @include flex-main(row, flex-start, center);
+    padding-left: 23px;
+    margin-bottom: 30px;
+  }
+}

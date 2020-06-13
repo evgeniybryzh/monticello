@@ -1,0 +1,25 @@
+// Fonts
+// @import url("");
+// Core
+@import "./core/vars";
+@import "./core/inheritance";
+@import "./core/mixins";
+@import "./core/common";
+
+// components-->common
+@import "./src/css/components/common/nav-box";
+@import "./src/css/components/common/slide-info";
+@import "./src/css/components/common/glide";
+@import "./src/css/components/common/button";
+@import "./src/css/components/common/content-box";
+@import "./src/css/components/common/grid";
+@import "./src/css/components/common/map";
+@import "./src/css/components/common/form";
+
+// Components
+@import "./src/css/components/header";
+@import "./src/css/components/footer";
+@import "./src/css/components/news";
+@import "./src/css/components/description";
+@import "./src/css/components/commerce";
+@import "./src/css/components/gallery";

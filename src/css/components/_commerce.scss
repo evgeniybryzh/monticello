@@ -1,0 +1,56 @@
+.commerce {
+  padding-top: 140px;
+  position: relative;
+  &__box {
+    width: 100%;
+    @include flex-main(column, center, flex-start);
+    flex-wrap: nowrap;
+    margin-bottom: 41px;
+    @include media-q($tablet-wide) {
+      width: 100%;
+      @include flex-main(row, space-between, flex-start);
+      flex-wrap: nowrap;
+      margin-bottom: 141px;
+    }
+  }
+
+  &__image-box {
+    margin-left: 70px;
+    @include media-q($tablet) {
+      margin-left: 0px;
+    }
+  }
+  &__bg-box {
+    width: 300px;
+    height: 470px;
+    background-color: $commerce-bg-color;
+    position: absolute;
+    top: 70px;
+    right: 147px;
+    z-index: -100;
+    @include media-q($phablet) {
+      width: 385px;
+      height: 470px;
+      background-color: $commerce-bg-color;
+      position: absolute;
+      top: 70px;
+      right: 147px;
+      z-index: -100;
+    }
+    @include media-q($tablet) {
+      width: 585px;
+      height: 470px;
+      background-color: $commerce-bg-color;
+      position: absolute;
+      top: 70px;
+      right: 147px;
+      z-index: -100;
+    }
+  }
+  &__image {
+    width: 350px;
+    @include media-q($tablet) {
+      width: 630px;
+    }
+  }
+}
