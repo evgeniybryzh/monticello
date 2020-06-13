@@ -2,7 +2,13 @@
   width: 100%;
   height: 100vh;
   padding-top: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
   @include flex-main(column, space-around, center);
+  @include media-q($tablet-wide) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   &__bg-box {
     width: 300px;
     height: 470px;
@@ -11,7 +17,7 @@
     top: -70px;
     left: -215px;
     z-index: -1;
-
+    display: none;
     @include media-q($phablet) {
       width: 385px;
       height: 470px;
@@ -20,8 +26,9 @@
       top: -70px;
       left: -215px;
       z-index: -1;
+      display: none;
     }
-    @include media-q($tablet) {
+    @include media-q($tablet-wide) {
       width: 585px;
       height: 470px;
       background-color: $description-bg-color;
@@ -29,6 +36,7 @@
       top: -70px;
       left: -215px;
       z-index: -1;
+      display: block;
     }
   }
   &__image-box {
@@ -40,7 +48,7 @@
     }
   }
   &__title {
-    @include font($main-bold-font, 44px, 400, $news-title-color);
+    @include font($main-bold-font, 24px, 400, $news-title-color);
     position: relative;
     &:before {
       content: "";
@@ -50,6 +58,9 @@
       background-color: $footer-black;
       left: 110px;
       top: -28px;
+      @include media-q($phone-wide) {
+        @include font($main-bold-font, 44px, 400, $news-title-color);
+      }
     }
   }
   &__content-wrapper {

@@ -1,6 +1,12 @@
 .commerce {
   padding-top: 140px;
   position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  @include media-q($tablet-wide) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   &__box {
     width: 100%;
     @include flex-main(column, center, flex-start);
@@ -15,9 +21,9 @@
   }
 
   &__image-box {
-    margin-left: 70px;
+    margin-left: 0px;
     @include media-q($tablet) {
-      margin-left: 0px;
+      margin-left: 70px;
     }
   }
   &__bg-box {
@@ -28,6 +34,7 @@
     top: 70px;
     right: 147px;
     z-index: -100;
+    display: none;
     @include media-q($phablet) {
       width: 385px;
       height: 470px;
@@ -36,8 +43,9 @@
       top: 70px;
       right: 147px;
       z-index: -100;
+      display: none;
     }
-    @include media-q($tablet) {
+    @include media-q($tablet-wide) {
       width: 585px;
       height: 470px;
       background-color: $commerce-bg-color;
@@ -45,10 +53,12 @@
       top: 70px;
       right: 147px;
       z-index: -100;
+      display: block;
     }
   }
   &__image {
     width: 350px;
+
     @include media-q($tablet) {
       width: 630px;
     }

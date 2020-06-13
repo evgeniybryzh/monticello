@@ -1,5 +1,9 @@
 .footer {
   position: relative;
+  padding-bottom: 40px;
+  @include media-q($tablet-wide) {
+    padding-bottom: 0px;
+  }
   &__content-wrapper {
     height: 100%;
     width: 100%;

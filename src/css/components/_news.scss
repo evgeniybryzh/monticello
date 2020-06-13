@@ -6,6 +6,12 @@
   background-size: cover;
   background-position: center;
   @include flex-main(column, center, center);
+  padding-left: 10px;
+  padding-right: 10px;
+  @include media-q($tablet-wide) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   &__main-title {
     @include font($main-regular-font, 44px, 400, $white);
     position: relative;

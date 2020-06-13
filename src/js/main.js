@@ -14,7 +14,7 @@ const useSlider = () => {
   const $footer = document.getElementById("footer");
 
   document.addEventListener("click", (event) => {
-    if (event.target == $secondCircle) {
+    if (event.target == $firstCircle) {
       $firstCircle.classList.add("active");
       $thirdCircle.classList.remove("active");
       $fourthCircle.classList.remove("active");

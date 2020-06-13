@@ -7,8 +7,8 @@
     margin-right: 10px;
   }
   &__big-image {
-    width: 300;
-    height: 300px;
+    width: 290px;
+    height: 290px;
     @include media-q($tablet-small) {
       width: 577;
       height: 437px;
@@ -36,8 +36,8 @@
     }
   }
   &__image-s {
-    width: 300;
-    height: 300px;
+    width: 290px;
+    height: 290px;
     margin-bottom: 10px;
 
     @include media-q($tablet-small) {

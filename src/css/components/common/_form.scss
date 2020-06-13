@@ -1,7 +1,6 @@
 .form {
-  @include flex-main(column, flex-start, center);
-
-  width: 350px;
+  @include flex-main(column, center, center);
+  width: auto;
   height: auto;
   position: relative;
   top: 0px;
@@ -12,7 +11,7 @@
   padding-top: 45px;
   padding-left: 10px;
   padding-right: 10px;
-  @include media-q($tablet) {
+  @include media-q($tablet-wide) {
     @include flex-main(column, flex-start, center);
     width: 770px;
     height: 453px;
