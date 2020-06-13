@@ -56,7 +56,7 @@
       width: 100px;
       height: 1px;
       background-color: $footer-black;
-      left: 110px;
+      left: 40px;
       top: -28px;
       @include media-q($phone-wide) {
         @include font($main-bold-font, 44px, 400, $news-title-color);
