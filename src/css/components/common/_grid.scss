@@ -5,12 +5,19 @@
   }
   &__big-img {
     margin-right: 10px;
+    margin-left: 0px;
+    padding-bottom: 10px;
+    @include media-q($tablet-wide) {
+      margin-right: 10px;
+      margin-left: 10px;
+      padding-bottom: 0px;
+    }
   }
   &__big-image {
     width: 290px;
     height: 290px;
     @include media-q($tablet-small) {
-      width: 577;
+      width: 577px;
       height: 437px;
     }
   }
@@ -30,10 +37,10 @@
     }
   }
   &__image-small:nth-child(1) {
-    margin-right: 00px;
-    @include media-q($tablet) {
-      margin-right: 10px;
-    }
+    margin-right: 10px;
+  }
+  &__image-small:nth-child(2) {
+    margin-right: 10px;
   }
   &__image-s {
     width: 290px;

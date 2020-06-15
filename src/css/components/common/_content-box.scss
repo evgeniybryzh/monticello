@@ -1,7 +1,12 @@
 .content-box {
   height: 100%;
-  @include flex-main(column, flex-start, flex-start);
-  padding: 57px 0;
+  @include flex-main(column, center, center);
+  padding: 20px 0;
+  @include media-q($tablet-wide) {
+    height: 100%;
+    @include flex-main(column, flex-start, flex-start);
+    padding: 57px 0;
+  }
 
   &__ico {
     width: 20px;
@@ -14,15 +19,20 @@
     text-transform: uppercase;
     @include font($main-bold-font, 44px, 600, $news-title-color);
     margin-bottom: 24px;
+    text-align: center;
+    @include media-q($phone-wide) {
+      text-align: start;
+    }
   }
   &__text {
     @include font($secondary-font, 18px, 400, $news-title-color);
     line-height: 30px;
     margin-bottom: 30px;
     font-size: 4vw;
+    text-align: center;
     @include media-q($tablet) {
       @include font($secondary-font, 18px, 400, $news-title-color);
-
+      text-align: start;
       line-height: 30px;
       margin-bottom: 30px;
     }

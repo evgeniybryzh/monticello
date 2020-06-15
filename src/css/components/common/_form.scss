@@ -6,21 +6,27 @@
   top: 0px;
   left: 0px;
   z-index: 1000;
-  background-image: url(../images/form-bg.jpg);
-  background-size: cover;
+  background-color: $white;
+  background-image: url(../images/form-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
   padding-top: 45px;
   padding-left: 10px;
   padding-right: 10px;
   @include media-q($tablet-wide) {
     @include flex-main(column, flex-start, center);
+    background-color: $white;
     width: 770px;
     height: 453px;
     position: absolute;
     top: 395px;
     left: 565px;
     z-index: 1000;
-    background-image: url(../images/form-bg.jpg);
-    background-size: cover;
+    background-image: url(../images/form-bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
     padding-top: 85px;
     padding-left: 60px;
     padding-right: 60px;
@@ -37,36 +43,76 @@
     @include font($main-bold-font, 44px, 600, $news-title-color);
     position: relative;
     margin-bottom: 25px;
-
+    text-align: center;
     &:before {
       content: "";
       position: absolute;
       width: 100px;
       height: 1px;
       background-color: $footer-black;
-      left: 113px;
+      left: 103px;
       top: -20px;
+    }
+    @include media-q($phone-wide) {
+      @include font($main-bold-font, 44px, 600, $news-title-color);
+      position: relative;
+      margin-bottom: 25px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 1px;
+        background-color: $footer-black;
+        left: 113px;
+        top: -20px;
+      }
     }
   }
   &__svg {
-    width: 15px;
-    height: 15px;
+    width: 50px;
+    height: 50px;
     fill: $footer-icon-color;
     z-index: 200;
     margin-right: 10px;
+    margin-bottom: 20px;
+    @include media-q($tablet-wide) {
+      width: 15px;
+      height: 15px;
+      fill: $footer-icon-color;
+      z-index: 200;
+      margin-right: 10px;
+      margin-bottom: 0px;
+    }
   }
   &__inputs {
+    padding-top: 50px;
     height: 100%;
     flex-basis: 50%;
-    @include flex-main(column, flex-start, flex-end);
+    @include flex-main(column, flex-start, center);
+    @include media-q($phone-wide) {
+      padding-top: 0px;
+      height: 100%;
+      flex-basis: 50%;
+      @include flex-main(column, flex-start, flex-end);
+    }
+  }
+  &__info-items {
+    @include flex-main(column, center, center);
+    @include media-q($phone-wide) {
+      @include flex-main(row, flex-start, center);
+    }
   }
   &__info-items:not(:last-of-type) {
     margin-bottom: 40px;
-    @include flex-main(row, flex-start, center);
   }
   &__text {
     @include font($main-font, 18px, 400, $news-title-color);
-    &:first-of-type {
+    font-size: 7vw;
+    text-align: center;
+
+    @include media-q($tablet) {
+      @include font($main-font, 18px, 400, $news-title-color);
     }
   }
   &__input {
@@ -93,7 +139,12 @@
     }
   }
   &__button {
-    width: 140px;
+    width: 90%;
+    background-color: $white;
+    @include media-q($phone-wide) {
+      width: 140px;
+      background-color: $white;
+    }
   }
   &__info-list {
     padding-top: 20px;

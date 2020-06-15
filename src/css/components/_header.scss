@@ -6,7 +6,8 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  @include media-q($tablet) {
+  margin-bottom: 100px;
+  @include media-q($tablet-wide) {
     width: 100%;
     height: 100vh;
     background-image: url(../images/header-bg.jpg);
@@ -14,6 +15,7 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    margin-bottom: 0px;
   }
   &__title-box {
     @include flex-main(column, center, center);
@@ -21,13 +23,22 @@
     height: 100vh;
   }
   &__title {
-    padding-top: 215px;
+    padding-top: 415px;
     @include font($main-bold-font, 80px, 400, $white);
     font-size: 10vw;
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-bottom: 20px;
     text-align: center;
+    @include media-q($phone) {
+      padding-top: 215px;
+      @include font($main-bold-font, 80px, 400, $white);
+      font-size: 10vw;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
     @include media-q($tablet) {
       padding-top: 215px;
       @include font($main-bold-font, 80px, 400, $white);
@@ -51,12 +62,14 @@
     border: 1px solid $white;
     border-radius: 50%;
     @include flex-main;
+    display: none;
     cursor: pointer;
     &:hover {
       border: 1px solid $white;
     }
     transition: 0.3s ease all;
     @include media-q($phablet) {
+      display: flex;
       &:hover {
         border: 3px solid $white;
       }

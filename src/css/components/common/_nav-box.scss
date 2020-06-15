@@ -3,12 +3,11 @@
   top: 0;
   right: 0;
   left: 0;
-
   z-index: 500;
   @include flex-main(column, center, center);
   flex-wrap: wrap;
-
-  @include media-q($tablet) {
+  padding-top: 50px;
+  @include media-q($tablet-wide) {
     position: absolute;
     top: 0;
     right: 0;
@@ -16,6 +15,7 @@
     height: 160px;
     z-index: 500;
     @include flex-main(row, space-between, center);
+    padding-top: 0px;
   }
   &__link {
     @include flex-main;
@@ -24,6 +24,12 @@
   &__nav {
     flex-basis: 60%;
     padding-left: 54px;
+    display: none;
+    @include media-q($tablet-wide) {
+      flex-basis: 60%;
+      padding-left: 54px;
+      display: block;
+    }
   }
   &__nav-list {
     @include flex-main(row, center, center);
@@ -63,6 +69,11 @@
   }
   &__icon-box {
     flex-basis: 15%;
+    margin-bottom: 20px;
+    @include media-q($tablet-wide) {
+      flex-basis: 15%;
+      margin-bottom: 0px;
+    }
   }
   &__circle {
     display: none;

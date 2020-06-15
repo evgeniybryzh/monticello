@@ -29,7 +29,7 @@
   }
   &__button {
     margin-bottom: 20px;
-    @include media-q($tablet) {
+    @include media-q($tablet-wide) {
       margin-bottom: 0px;
     }
   }

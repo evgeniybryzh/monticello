@@ -1,15 +1,18 @@
 .commerce {
-  padding-top: 140px;
+  padding-top: 40px;
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: 50px;
   @include media-q($tablet-wide) {
     padding-left: 0px;
     padding-right: 0px;
+    padding-top: 140px;
+    margin-bottom: 0px;
   }
   &__box {
     width: 100%;
-    @include flex-main(column, center, flex-start);
+    @include flex-main(column-reverse, center, center);
     flex-wrap: nowrap;
     margin-bottom: 41px;
     @include media-q($tablet-wide) {
@@ -57,7 +60,10 @@
     }
   }
   &__image {
-    width: 350px;
+    width: 300px;
+    @include media-q($phone) {
+      width: 350px;
+    }
 
     @include media-q($tablet) {
       width: 630px;

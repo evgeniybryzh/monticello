@@ -1,13 +1,16 @@
 .description {
   width: 100%;
-  height: 100vh;
-  padding-top: 60px;
+  height: auto;
+  padding-top: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  @include flex-main(column, space-around, center);
+  @include flex-main(column, flex-start, center);
   @include media-q($tablet-wide) {
     padding-left: 0px;
     padding-right: 0px;
+    height: 100vh;
+    @include flex-main(column, space-around, center);
+    padding-top: 60px;
   }
   &__bg-box {
     width: 300px;
@@ -18,6 +21,7 @@
     left: -215px;
     z-index: -1;
     display: none;
+
     @include media-q($phablet) {
       width: 385px;
       height: 470px;
@@ -42,7 +46,7 @@
   &__image-box {
     position: relative;
     margin-right: 0px;
-    @include media-q($tablet) {
+    @include media-q($tablet-wide) {
       position: relative;
       margin-right: 72px;
     }
@@ -57,9 +61,19 @@
       height: 1px;
       background-color: $footer-black;
       left: 40px;
-      top: -28px;
-      @include media-q($phone-wide) {
-        @include font($main-bold-font, 44px, 400, $news-title-color);
+      top: -33px;
+    }
+    @include media-q($phone-wide) {
+      @include font($main-bold-font, 44px, 400, $news-title-color);
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 1px;
+        background-color: $footer-black;
+        left: 110px;
+        top: -33px;
       }
     }
   }
@@ -74,7 +88,11 @@
     }
   }
   &__image {
-    width: 350px;
+    width: 300px;
+    @include media-q($phone) {
+      width: 350px;
+    }
+
     @include media-q($tablet) {
       width: 630px;
     }

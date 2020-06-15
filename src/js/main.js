@@ -1,6 +1,8 @@
 "use strict";
 import { useMap } from "./map";
+import { useBurger } from "./burger";
 useMap();
+useBurger();
 const useSlider = () => {
   const $firstCircle = document.getElementById("circle-1");
   const $secondCircle = document.getElementById("circle-2");

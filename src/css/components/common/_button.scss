@@ -1,11 +1,23 @@
 .button {
-  width: 191px;
-  height: 50px;
+  width: 90%;
+  height: 70px;
   @include flex-main;
   border: 1px solid $news-title-color;
   transition: 0.3s ease all;
   cursor: pointer;
+
   &:hover {
-    background-color: $description-bg-color;
+    background-color: none;
+  }
+  @include media-q($tablet-wide) {
+    width: 191px;
+    height: 50px;
+    @include flex-main;
+    border: 1px solid $news-title-color;
+    transition: 0.3s ease all;
+    cursor: pointer;
+    &:hover {
+      background-color: $description-bg-color;
+    }
   }
 }

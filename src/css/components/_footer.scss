@@ -7,11 +7,19 @@
   &__content-wrapper {
     height: 100%;
     width: 100%;
-    @include flex-main(column, flex-start, center);
-    padding-top: 200px;
+    @include flex-main(column, space-around, center);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    @include media-q($phone-wide) {
+      height: 100%;
+      width: 100%;
+      padding-bottom: 0px;
+      @include flex-main(column, flex-start, center);
+      padding-top: 200px;
+    }
   }
   &__content {
-    height: 423px;
+    height: auto;
     width: 100%;
     background-image: url(../images/footer-bg.jpg);
     background-size: cover;
@@ -28,7 +36,7 @@
     @include flex-main(column, space-between, center);
     width: 100%;
     padding: 0 10px;
-    margin-bottom: 35px;
+    margin-bottom: 5px;
     @include media-q($tablet) {
       @include flex-main(row, space-between, center);
       width: 100%;
