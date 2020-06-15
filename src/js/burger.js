@@ -13,7 +13,6 @@ export const useBurger = () => {
   const $burgerNews = document.getElementById("burger-news");
   const $burgerContact = document.getElementById("burger-contact");
   document.addEventListener("click", (event) => {
-    console.log(event.target);
     if (
       event.target == $burger ||
       event.target == $burgerStripeFirst ||
