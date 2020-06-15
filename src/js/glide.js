@@ -4,16 +4,15 @@ const config = {
   startAt: 1,
   perView: 3,
   autoplay: 4000,
+  focusAt: "center",
   gap: 45,
   animationDuration: 500,
   breakpoints: {
-    1300: {
-      perView: 3,
-    },
-    900: {
+    1090: {
       perView: 2,
     },
-    600: {
+
+    750: {
       perView: 1,
     },
   },

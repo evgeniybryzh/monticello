@@ -1,5 +1,6 @@
 .glide {
   position: relative;
+
   &__bullets {
     position: absolute;
     top: 575px;
@@ -7,6 +8,7 @@
 
     @include flex-main(row, space-between, center);
   }
+
   &__arrows &__arrow--left {
     left: -95px;
     border-radius: 50%;
@@ -14,6 +16,20 @@
     top: 45%;
     display: none;
     @include media-q($tablet-wide) {
+      left: -95px;
+      border-radius: 50%;
+      transform: rotate(90deg);
+      top: 45%;
+      display: none;
+    }
+    @include media-q($desktop) {
+      display: block;
+      left: -40px;
+      border-radius: 50%;
+      transform: rotate(90deg);
+      top: 45%;
+    }
+    @include media-q($desktop-wide) {
       display: block;
       left: -95px;
       border-radius: 50%;
@@ -28,6 +44,20 @@
     top: 45%;
     display: none;
     @include media-q($tablet-wide) {
+      right: -40px;
+      border-radius: 50%;
+      transform: rotate(-90deg);
+      top: 45%;
+      display: none;
+    }
+    @include media-q($desktop) {
+      right: -40px;
+      border-radius: 50%;
+      transform: rotate(-90deg);
+      top: 45%;
+      display: block;
+    }
+    @include media-q($desktop-wide) {
       right: -95px;
       border-radius: 50%;
       transform: rotate(-90deg);

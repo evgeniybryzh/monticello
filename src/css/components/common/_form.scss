@@ -15,6 +15,23 @@
   padding-left: 10px;
   padding-right: 10px;
   @include media-q($tablet-wide) {
+    @include flex-main(column, center, center);
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    background-color: $white;
+    background-image: url(../images/form-bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-top: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @include media-q($desktop-wide) {
     @include flex-main(column, flex-start, center);
     background-color: $white;
     width: 770px;

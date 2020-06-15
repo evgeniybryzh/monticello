@@ -87,6 +87,22 @@
       width: 220px;
       @include flex-main(row, space-between, center);
       position: absolute;
+      right: -80px;
+      top: 405px;
+      transform: rotate(90deg);
+    }
+    @include media-q($desktop-wide) {
+      width: 220px;
+      @include flex-main(row, space-between, center);
+      position: absolute;
+      right: -180px;
+      top: 405px;
+      transform: rotate(90deg);
+    }
+    @include media-q($desktop-very-wide) {
+      width: 220px;
+      @include flex-main(row, space-between, center);
+      position: absolute;
       right: -280px;
       top: 405px;
       transform: rotate(90deg);
